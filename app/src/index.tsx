@@ -6,12 +6,7 @@ import { Route, Switch, BrowserRouter } from "react-router-dom";
 import { ConnectedRouter } from "react-router-redux";
 
 import {store, history} from "./stores/store";
-import LandingPage from "./pages/landing";
-import NotFoundPage from "./pages/notFound";
-import AboutPage from "./pages/about";
-import PrivateRoute from "./components/privateRoute";
-import Api from "./pages/api";
-import UserDiscovery from "./pages/userDiscovery";
+import FileList from "./pages/fileList";
 import "./styles/basicTest.scss";
 import "./styles/swagger-ui.css";
 import "./styles/graphiql.css";
@@ -19,16 +14,11 @@ import Logger from "./utils/logger";
 
 const logger = Logger(path.basename(__filename));
 
+console.log('router loaded');
 const App = (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Switch>
-        <Route exact path="/" component={LandingPage as any}/>
-        <Route exact path="/About" component={AboutPage}/>
-        <PrivateRoute exact path="/Swagger" component={Api} />
-        <PrivateRoute exact path="/UserDiscovery" component={UserDiscovery} />
-        <PrivateRoute path="/*" component={NotFoundPage as any} />
-      </Switch>
+        <FileList/>
     </ConnectedRouter>
   </Provider>);
 

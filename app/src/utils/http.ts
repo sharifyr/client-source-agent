@@ -11,10 +11,10 @@ export const get = (url: string): Promise<any> => {
   const myHeaders = new Headers();
   myHeaders.append("Access-Control-Allow-Origin", config.authDomain);
 
-  const auth = store.getState().userData.auth;
-  if ( auth !== null) {
-    myHeaders.append("Authorization", "Bearer " + auth);
-  }
+  // const auth = store.getState().userData.auth;
+  // if ( auth !== null) {
+  //   myHeaders.append("Authorization", "Bearer " + auth);
+  // }
 
   const cache = "default" as "default" | "no-store" | "reload" | "no-cache" | "force-cache" | undefined;
   const mode = "cors" as "cors" | "navigate" | "same-origin" | "no-cors" | undefined;
@@ -50,10 +50,10 @@ export const del = (url: string): Promise<any> => {
   const myHeaders = new Headers();
   myHeaders.append("Access-Control-Allow-Origin", config.authDomain);
 
-  const auth = store.getState().userData.auth;
-  if ( auth !== null) {
-    myHeaders.append("Authorization", "Bearer " + auth);
-  }
+  // const auth = store.getState().userData.auth;
+  // if ( auth !== null) {
+  //   myHeaders.append("Authorization", "Bearer " + auth);
+  // }
 
   const cache = "default" as "default" | "no-store" | "reload" | "no-cache" | "force-cache" | undefined;
   const mode = "cors" as "cors" | "navigate" | "same-origin" | "no-cors" | undefined;
@@ -93,10 +93,10 @@ export const post = (url: string, data: any): Promise<any> => {
   myHeaders.append("Access-Control-Allow-Origin", config.authDomain);
   myHeaders.append("Content-Type", "application/json");
 
-  const auth = store.getState().userData.auth;
-  if ( auth !== null) {
-    myHeaders.append("Authorization", "Bearer " + auth);
-  }
+  // const auth = store.getState().userData.auth;
+  // if ( auth !== null) {
+  //   myHeaders.append("Authorization", "Bearer " + auth);
+  // }
 
   const cache = "default" as "default" | "no-store" | "reload" | "no-cache" | "force-cache" | undefined;
   const mode = "cors" as "cors" | "navigate" | "same-origin" | "no-cors" | undefined;
@@ -133,10 +133,10 @@ export const put = (url: string, data: any): Promise<any> => {
   myHeaders.append("Access-Control-Allow-Origin", config.authDomain);
   myHeaders.append("Content-Type", "application/json");
 
-  const auth = store.getState().userData.auth;
-  if ( auth !== null) {
-    myHeaders.append("Authorization", "Bearer " + auth);
-  }
+  // const auth = store.getState().userData.auth;
+  // if ( auth !== null) {
+  //   myHeaders.append("Authorization", "Bearer " + auth);
+  // }
 
   const cache = "default" as "default" | "no-store" | "reload" | "no-cache" | "force-cache" | undefined;
   const mode = "cors" as "cors" | "navigate" | "same-origin" | "no-cors" | undefined;

@@ -13,10 +13,8 @@ export interface ILoginFormData {
 }
 
 export interface IAppState {
-  "modal": Reducers.ModalTypes;
-  "forms": Reducers.IForms;
-  "ui": Reducers.IUIState;
-  "userData": IUserData;
+
+  "files": string[];
 }
 
 export interface IUserData {
@@ -26,14 +24,7 @@ export interface IUserData {
 }
 
 export const initialState: IAppState = {
-  "modal": Reducers.ModalTypes.NONE,
-  "userData": {
-    "currentUserId": 0,
-    "auth": window.sessionStorage ? window.sessionStorage.accessToken || "" : "",
-    "users": []
-  },
-  "forms": Reducers.initialFormsState,
-  "ui": Reducers.initialUIState
+  "files": []
 };
 
 export const history = createBrowserHistory();

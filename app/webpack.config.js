@@ -37,10 +37,10 @@ var config = {
     ]
   },
   node: {
-    fs: "empty",
     __dirname: true,
     __filename: true
   },
+  target: 'node',
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     historyApiFallback: true,
